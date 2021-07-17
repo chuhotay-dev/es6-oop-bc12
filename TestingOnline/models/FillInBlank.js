@@ -14,7 +14,14 @@ class FillInBlank extends Question {
     }
 
     checkCorrect() {
-        
+        const userValue = document.getElementById(`fill${this.id}-fillAnswer${this.answers[0].id}`).value;
+        // if (userValue === this.answers[0].content) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+
+        return userValue === this.answers[0].content;
     }
 }
 
